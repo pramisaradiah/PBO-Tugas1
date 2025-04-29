@@ -124,16 +124,21 @@ public class MenuService {
                     String nama = scanner.nextLine();
                     System.out.print("Harga Saham: ");
                     double harga = scanner.nextDouble();
+                    scanner.nextLine();
+                    ClearScreen.clear();
                     daftarSaham.add(new Saham(kode, nama, harga));
-                    System.out.println("\nSaham berhasil ditambahkan!");
+                    System.out.println("+==================================+");
+                    System.out.println("|             [SELAMAT]            |");
+                    System.out.println("|   Saham berhasil ditambahkan!    |");
+                    System.out.println("+==================================+");
                     System.out.println("Tekan Enter untuk kembali...");
                     scanner.nextLine();
                 }
                 case 2 -> {
-                    ClearScreen.clear();
-                    System.out.println("+=============================+");
-                    System.out.println("|        UBAH HARGA SAHAM     |");
-                    System.out.println("+=============================+");
+                    ClearScreen.clear();  
+                    System.out.println("+=======================================+");
+                    System.out.println("|            UBAH HARGA SAHAM           |");
+                    System.out.println("+=======================================+");
                     if (daftarSaham.isEmpty()) {
                         System.out.println("Belum ada saham yang tersedia.");
                     } else {
@@ -141,7 +146,7 @@ public class MenuService {
                             Saham s = daftarSaham.get(i);
                             System.out.printf("| %d | %s - %s (Rp %.2f)\n", i+1, s.kode, s.namaPerusahaan, s.harga);
                         }
-                        System.out.println("+-----------------------------+");
+                        System.out.println("+---------------------------------------+");
                         System.out.print("Pilih saham untuk ubah harga: ");
                         int idx = scanner.nextInt() - 1;
                         System.out.print("Masukkan harga baru: ");
