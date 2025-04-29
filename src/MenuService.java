@@ -13,6 +13,7 @@ public class MenuService {
         seedData();
 
         while (true) {
+            ClearScreen.clear();          
             System.out.println("+======================+");
             System.out.println("|         MENU         |");
             System.out.println("+======================+");
