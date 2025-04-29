@@ -23,3 +23,13 @@ Program ini adalah aplikasi berbasis Java yang memungkinkan pengguna melakukan i
 
 5. **Portofolio**: 
    Portofolio customer menampilkan daftar saham yang dimiliki beserta jumlah dan total nominal pembelian. Selain itu, portofolio juga menampilkan total nilai pasar saham dan bunga SBN yang diterima setiap bulan.
+
+## **Identitas Kelompok**
+1. Ni Made Indri Cahyani (2405551104)
+2. Ni Putu Diah Pramisara Putri (2405551135)
+
+## **UML Program Investasi Saham**
+![UML-saham](https://github.com/user-attachments/assets/30f61ccc-8b8d-48ac-b3ed-971a8eb016d9)
+
+## **Dokumentasi Program**
+akan diisi segera
