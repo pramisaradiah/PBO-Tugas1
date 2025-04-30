@@ -322,11 +322,18 @@ public class MenuService {
 
     static void simulasiSBN(Customer customer) {
         System.out.println("\nSimulasi Kupon SBN:");
-        for (PortfolioItemSBN p : customer.sbnDimiliki) {
-            double bungaPerBulan = (p.sbn.bunga / 100) / 12 * 0.9 * p.nominalInvestasi;
-            System.out.println(p.sbn.nama + " - Bunga per bulan: Rp " + bungaPerBulan);
+        if (customer.sbnDimiliki.isEmpty()) {
+            System.out.println("Anda belum memiliki SBN.");
+        } else {
+            for (PortfolioItemSBN p : customer.sbnDimiliki) {
+                double bungaPerBulan = (p.sbn.bunga / 100) / 12 * 0.9 * p.nominalInvestasi;
+                System.out.println(p.sbn.nama + " - Bunga per bulan: Rp " + String.format("%,.2f", bungaPerBulan));
+            }
         }
+        System.out.println("\nTekan ENTER untuk kembali ke menu...");
+        scanner.nextLine();
     }
+    
 
     static void lihatPortofolio(Customer customer) {
         ClearScreen.clear();
